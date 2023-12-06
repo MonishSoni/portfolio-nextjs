@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,9 +13,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="px-10">
+        <div className=" px-4 md:px-10 bg-bg ">
           <Header />
-          <main>{children}</main>
+          <main className="min-h-screen">{children}</main>
         </div>
       </body>
     </html>
